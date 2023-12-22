@@ -1,0 +1,23 @@
+version: 1
+from: "ghcr.io/nfra-project/kickstart-flavor-php:unstable"
+ports: "80:80;4000:4000;4100:4100;9229:9229"
+
+# packages: []
+
+command:
+  build:
+    - sudo chmod 777 -R /var/www/html
+    - npm install
+  init-workspaces:
+    - "mkdir -p workspaces"
+    - "git -C ./workspaces/ clone git@github.com:leuffen/jodastyle.git"
+    - "git -C ./workspaces/ clone git@github.com:leuffen/jodastyle-dev.git"
+    - "git -C ./workspaces/ clone git@github.com:kasimirjs/kasi-embed.git"
+    - "git -C ./workspaces/ clone git@github.com:kasimirjs/kasimirjs-kit-bootstrap.git"
+    - "npm install"
+  dev:
+    - killall webpack ||  echo "no job"
+    - "D:webpack serve"
+
+  killall:
+    killall jekyll

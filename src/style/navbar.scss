@@ -1,0 +1,52 @@
+@import "host";
+
+.navbar {
+
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1030;
+    height: 50px;
+    background-color: black;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
+
+    &__logo {
+        height: 100%;
+        display: flex;
+        align-items: center;
+
+        & > img {
+            height: 70%;
+            width: auto;
+        }
+    }
+
+    li {
+        list-style: none;
+    }
+
+    &__menu {
+        
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin: 0;
+        & > li > a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 1.2rem;
+            font-weight: 500;
+
+            &:hover {
+                color: #f1c40f;
+            }
+        }
+    }
+
+
+
+}
