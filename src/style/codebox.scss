@@ -1,0 +1,33 @@
+
+:host {
+
+}
+
+.codebox {
+    background-color: #eee;
+    padding: 4px;
+    &__header {
+
+    }
+
+    &__content {
+
+        display: flex;
+        flex-direction: row;
+        &>* {
+            max-height: 600px;
+            margin: 2px;
+            flex: 1;
+            padding: 6px;
+            background-color: #fff;
+            height: 100%;
+            overflow: scroll;
+        }
+
+        &>*:first-child {
+            border-left: 2px solid #000;
+        }
+    }
+
+
+}

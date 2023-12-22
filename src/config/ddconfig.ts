@@ -19,6 +19,12 @@ export type DDConfig = {
      */
     title? : string;
 
+    /**
+     * the Site to initially load if no hash is provided
+     *
+     * Default: /README.md
+     */
+    startsite?: string;
 
     navbar? : {
         /**

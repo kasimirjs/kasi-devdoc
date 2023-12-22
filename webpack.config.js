@@ -35,7 +35,8 @@ module.exports = {
                      "css-loader", 'sass-loader'],
                 include: [
                     path.resolve(__dirname, "src"),
-                    path.resolve(__dirname, "showcase")
+                    path.resolve(__dirname, "showcase"),
+                    path.resolve(__dirname, "node_modules"),
                 ]
             },
 

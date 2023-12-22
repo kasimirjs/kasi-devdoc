@@ -4,7 +4,6 @@ import * as navCss from '../style/navbar.scss';
 import {customElement, KaCustomElement, template} from "@kasimirjs/embed";
 
 
-console.log(navCss.default.toString());
 
 // language=html
 const html = `
