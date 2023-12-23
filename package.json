@@ -1,6 +1,6 @@
 {
-  "name": "@kasimirjs/kit-bootstrap",
-  "version": "1.0.7",
+  "name": "@kasimirjs/devdoc",
+  "version": "1.0.0",
   "description": "",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
