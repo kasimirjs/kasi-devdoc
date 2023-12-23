@@ -22,6 +22,7 @@ module.exports = {
                     path.resolve(__dirname, "src"),
                     path.resolve(__dirname, "workspaces"),
                     path.resolve(__dirname, "showcase"),
+                    path.resolve(__dirname, "examples"),
                 ]
             },
             {

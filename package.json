@@ -33,7 +33,9 @@
     "highlight.js": "^11.9.0",
     "markdown-it": "^13.0.2",
     "raw-loader": "^4.0.2",
-    "reflect-metadata": "*"
+    "reflect-metadata": "*",
+      "acorn": "^8.11.2",
+      "acorn-typescript": "^1.4.12"
   },
   "devDependencies": {
     "css-loader": "^6.8.1",

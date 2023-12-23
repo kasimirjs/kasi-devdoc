@@ -42,6 +42,17 @@ export type DDConfig = {
 
 }
 
-export function loadConfig(url : string) : Promise<DDConfig> {
-    return fetch(url).then(r => r.json());
+export async function loadConfig(url : string) : Promise<DDConfig> {
+
+    try {
+        let data = await fetch(url);
+
+        if ( ! data.ok)
+            return Promise.reject(`[Kasi DevDoc] Cannot load '${url}': ` + data.status + " " + data.statusText);
+        return await (data).json()
+    } catch (e) {
+        console.error(`[kasi devdoc] Cannot load '${url}'` + e);
+        return Promise.reject(`Cannot load '${url}'` + e);
+    }
+
 }
