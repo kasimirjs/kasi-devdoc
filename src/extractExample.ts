@@ -20,13 +20,7 @@ export function extractExample(exampleName: string, code: string): string | null
                         if (exampleProperty && exampleProperty.value.type === 'ArrowFunctionExpression') {
                             const body = exampleProperty.value.body;
                             // Check if the body is a block statement or a single expression
-                            if (body.type === 'BlockStatement') {
-                                // Extract the code inside the block statement
-                                extractedCode = code.substring(body.start + 1, body.end - 1).trim();
-                            } else {
-                                // Extract the single expression
-                                extractedCode = code.substring(body.start, body.end);
-                            }
+                            extractedCode = code.substring(body.start, body.end);
                         }
                     }
                 }
