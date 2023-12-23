@@ -78,7 +78,7 @@ export class DD_CodeBox extends KaCustomElement {
         codeElement.innerHTML =      hljs.highlight(code, {language: "typescript"}).value;
 
         const frameworks = {
-            bootstrap5: "https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+            bootstrap5: "https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
         };
 
         for(let f in example.htmlFrameworks ?? {}) {
